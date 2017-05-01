@@ -74,38 +74,16 @@ MapVis.prototype.initVis = function(){
     // legend section
     vis.legendBox = vis.svg.append("g")
         .attr("class", "legend")
-        .attr("transform", "translate(0, " + (vis.height - 230) + ")");
-
-    // vis.legendBox
-    //     .append("rect")
-    //     .attr("fill", "white")
-    //     .attr("width", 100)
-    //     .attr("height", 200);
+        .attr("transform", "translate(0, " + (vis.height - 220) + ")");
 
     vis.legend = d3.legend.size()
         .title("Number of Trials")
         .labelFormat(d3.format("1f"))
         .shape('circle')
-        .shapePadding(20)
+        .shapePadding(17)
         .labelOffset(5)
         .orient('vertical')
         .ascending(true);
-
-    // vis.legendSvg = d3.select(vis.parentElement + "-legend")
-    //     .append("svg")
-    //     .attr("width", vis.width)
-    //     .attr("height", 100)
-    //     .append("g")
-    //     .attr("transform", "translate(0, 20)");
-    //
-    // vis.legend = d3.legend.size()
-    //     .title("Number of Trials")
-    //     .labelFormat(d3.format("1f"))
-    //     .shape('circle')
-    //     .shapePadding(10)
-    //     .labelOffset(15)
-    //     .orient('horizontal')
-    //     .ascending(true);
 
     vis.formatData();
 }
@@ -129,7 +107,9 @@ MapVis.prototype.formatData = function(){
         d.longitude = +d.longitude;
     });
 
-    vis.radScale.domain(d3.extent(vis.trials.map(function(d) { return d.trials; })));
+    vis.radScale
+        .domain(d3.extent(vis.trials.map(function(d) { return d.trials; })))
+        .nice();
 
     // Update the visualization
     vis.wrangleData(+minYear);

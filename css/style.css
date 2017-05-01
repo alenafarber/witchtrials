@@ -1,12 +1,15 @@
 body {
-    font-family: "Roboto", sans-serif !important;
+    font-family: "Roboto", sans-serif;
     background-color: #e6f1ff;
+    /*font-size: 12px;*/
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
     text-align: center;
-    font-size: 36px;
-    margin-bottom: 5px;
+}
+
+.panel-title {
+    text-align: left;
 }
 
 .legendTitle {
@@ -20,45 +23,11 @@ h1 {
     stroke-width: 0.5px;
 }
 
-#timeline {
-    margin-top: 9px;
-    display:flex;
-    justify-content:space-around;
-}
-
-#slider {
-    margin-top: 6px;
-}
-
 .legend circle {
     fill: red;
     fill-opacity: 0.4;
     stroke-width: 0.5;
     stroke: black;
-}
-
-.year-label {
-    background-color: #c9ffd3;
-    text-align: center;
-    border-radius: 5px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-.controls {
-    text-align: center;
-}
-
-.form-control {
-    margin-top: 7px;
-}
-
-.year {
-    width: 60px;
-}
-
-#dropdown {
-    padding-right: 50px;
 }
 
 .d3-tip {

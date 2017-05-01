@@ -35,6 +35,7 @@ function createVisualization(error, mapData, trialData) {
         .append('div')
         .call(chronSlider);
 
+    // COMMENT OUT FOR TROUBLESHOOTING OR ELSE V ANNOYING
     introJs().start();
 
 }
