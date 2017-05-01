@@ -129,6 +129,7 @@ function chroniton() {
           .attr('height', 15)
           .on('click', function() {
             chart.playPause();
+            $('.collapse').collapse('hide');
             playIcon.attr('d', chart.playing() ? pauseD : playD);
           });
       }
@@ -235,7 +236,7 @@ function chroniton() {
           chart.setValue(domain[0]);
         } else {
           chart.stop();
-            playIcon.attr('d', chart.playing() ? pauseD : playD);
+          playIcon.attr('d', chart.playing() ? pauseD : playD);
         }
       }
   }
@@ -264,6 +265,7 @@ function chroniton() {
 
   chart.play = function() {
     play = true;
+    playIcon.attr('d', chart.playing() ? pauseD : playD);
     return chart;
   };
 
@@ -274,12 +276,14 @@ function chroniton() {
   chart.playPause = function() {
     if (play) chart.pause();
     else chart.play();
+    playIcon.attr('d', chart.playing() ? pauseD : playD);
     return chart;
   };
 
   chart.pause = function() {
     playLastTick = null;
     play = false;
+    playIcon.attr('d', chart.playing() ? pauseD : playD);
     return chart;
   };
 

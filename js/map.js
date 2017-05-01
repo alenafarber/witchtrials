@@ -7,6 +7,7 @@ MapVis = function(_parentElement, _map, _trials){
     this.parentElement = "#" + _parentElement;
     this.countries = _map;
     this.trials = _trials;
+    this.activeCountry = "";
 
     this.initVis();
 }
@@ -86,7 +87,7 @@ MapVis.prototype.initVis = function(){
         .ascending(true);
 
     vis.formatData();
-}
+};
 
 
 
@@ -113,7 +114,7 @@ MapVis.prototype.formatData = function(){
 
     // Update the visualization
     vis.wrangleData(+minYear);
-}
+};
 
 
 /*
@@ -131,7 +132,7 @@ MapVis.prototype.wrangleData = function(date){
 
     // Update the visualization
     vis.updateVis();
-}
+};
 
 
 
@@ -153,13 +154,19 @@ MapVis.prototype.updateVis = function(){
 
     vis.circles.enter()
         .append("circle")
-        .attr("class", "node");
+        .attr("class", function (d) { return "node " + d.country; });
 
     vis.circles
         .attr("transform", function(d) {
             return "translate(" + vis.projection([d.longitude, d.latitude]) + ")";
         })
-        .attr("fill", "red")
+        .attr("fill", function(d) {
+            if (d.country == vis.activeCountry) {
+                return "yellow";
+            } else {
+                return "red";
+            }
+        })
         .attr("stroke", "black")
         .attr("fill-opacity", 0.4)
         .attr("stroke-width", 0.5)
@@ -169,4 +176,4 @@ MapVis.prototype.updateVis = function(){
 
     vis.circles.exit().transition().duration(200).attr("r", 0).remove();
 
-}
+};
