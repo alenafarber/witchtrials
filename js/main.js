@@ -51,7 +51,7 @@ function createVisualization(error, mapData, trialData, interest) {
     addPanels("accordion", interest);
 
     // COMMENT OUT FOR TROUBLESHOOTING OR ELSE V ANNOYING
-    // introJs().start();
+    introJs().start();
 
 }
 
