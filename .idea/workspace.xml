@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f36f0b5f-f47b-4640-9f74-9c64584e2f0c" name="Default" comment="" />
+    <list default="true" id="f36f0b5f-f47b-4640-9f74-9c64584e2f0c" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/nouislider.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/nouislider.pips.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/nouislider.tooltips.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/nouislider.min.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -317,12 +323,12 @@
       <workItem from="1492473585675" duration="6676000" />
       <workItem from="1492614779275" duration="1216000" />
       <workItem from="1493503289103" duration="16394000" />
-      <workItem from="1493598643837" duration="22442000" />
+      <workItem from="1493598643837" duration="22511000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49034000" />
+    <option name="totallyTimeSpent" value="49103000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -335,9 +341,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-16" y="-16" width="3232" height="1732" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884097" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
